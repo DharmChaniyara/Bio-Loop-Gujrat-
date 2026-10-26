@@ -1,0 +1,37 @@
+{
+  "w1_material_fit": {
+    "value": 0.30,
+    "description": "Compatibility of biomass physical and chemical characteristics with conversion technology",
+    "source": "Standard biomass evaluation heuristics (illustrative baseline)",
+    "limitations": "Does not account for proprietary pretreatment variations",
+    "record_status": "demo"
+  },
+  "w2_processing_fit": {
+    "value": 0.20,
+    "description": "Operational tolerance to moisture and required processing steps (drying, chopping)",
+    "source": "Standard biomass evaluation heuristics (illustrative baseline)",
+    "limitations": "Estimates energy penalty based on typical moisture curve",
+    "record_status": "demo"
+  },
+  "w3_logistics": {
+    "value": 0.20,
+    "description": "Proximity to registered off-takers and aggregation hubs based on Haversine distance",
+    "source": "Haversine distance from district centroid",
+    "limitations": "Straight-line distance; road transit distance and road quality will differ",
+    "record_status": "demo"
+  },
+  "w4_market_fit": {
+    "value": 0.15,
+    "description": "Local off-taker demand readiness, commercial maturity, and off-take diversity",
+    "source": "Gujarat agro-industrial market review (indicative)",
+    "limitations": "Prices and offtake willingness fluctuate seasonally",
+    "record_status": "demo"
+  },
+  "w5_ease": {
+    "value": 0.15,
+    "description": "Implementation simplicity, low capex intensity, and low permitting complexity",
+    "source": "Process engineering rule-of-thumb baseline",
+    "limitations": "Varies by individual land and regulatory approvals",
+    "record_status": "demo"
+  }
+}

@@ -1,0 +1,78 @@
+/* ==========================================================================
+   BioLoop Gujarat - Core Design Tokens & Motion System
+   Designed for agricultural and energy professionals.
+   Restrained editorial palette, humanist typography, fluid scaling.
+   No gradients, no glassmorphism, no purple/indigo, no neon effects.
+   ========================================================================== */
+
+:root {
+  /* Color Palette */
+  --color-forest: #2D4A2F;      /* Primary, headings, key accents, navigation */
+  --color-cream: #F7F3EA;       /* Full-bleed page canvas background */
+  --color-warm-paper: #EFE9DA;  /* Panels, cards, inset wells, table headers */
+  --color-terracotta: #C4784F;  /* Accent, key metrics, active tab highlight */
+  --color-ochre: #D4A843;       /* Editorial thin rules, subtle tags */
+  --color-ink: #1F2420;         /* Primary high-contrast body text */
+  --color-sage: #DDE3D3;        /* Table stripes, secondary fills, border accents */
+
+  /* Neutral Tints & Borders */
+  --color-border: #D8CFBE;
+  --color-border-dark: #8F8778;
+  --color-ink-muted: #565C56;
+  --color-ink-faint: #7C837C;
+  --color-white: #FFFFFF;
+  --color-danger: #A33A2A;
+  --color-danger-bg: #FBECE8;
+  --color-warning-bg: #FDF6E3;
+  --color-success-bg: #EAF2E8;
+
+  /* Typography */
+  --font-heading: 'Fraunces', 'Source Serif 4', Georgia, serif;
+  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+
+  /* Fluid Font Scales (clamp from 360px to 2560px) */
+  --text-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);      /* 11-13px */
+  --text-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.9rem);      /* 13-14.5px */
+  --text-base: clamp(0.9rem, 0.85rem + 0.3vw, 1.025rem);   /* 14.5-16.5px */
+  --text-md: clamp(1.025rem, 0.95rem + 0.4vw, 1.175rem);   /* 16.5-19px */
+  --text-lg: clamp(1.15rem, 1.05rem + 0.5vw, 1.35rem);     /* 18.5-22px */
+  --text-xl: clamp(1.35rem, 1.2rem + 0.75vw, 1.75rem);     /* 21.5-28px */
+  --text-2xl: clamp(1.6rem, 1.4rem + 1vw, 2.25rem);        /* 25.5-36px */
+
+  /* Fluid Spacing System */
+  --space-1: clamp(0.2rem, 0.15rem + 0.2vw, 0.3rem);
+  --space-2: clamp(0.4rem, 0.35rem + 0.3vw, 0.55rem);
+  --space-3: clamp(0.65rem, 0.55rem + 0.4vw, 0.85rem);
+  --space-4: clamp(0.85rem, 0.75rem + 0.5vw, 1.15rem);
+  --space-5: clamp(1.1rem, 0.95rem + 0.7vw, 1.45rem);
+  --space-6: clamp(1.35rem, 1.15rem + 0.9vw, 1.85rem);
+  --space-8: clamp(1.75rem, 1.5rem + 1.2vw, 2.5rem);
+  --space-10: clamp(2.2rem, 1.9rem + 1.5vw, 3.25rem);
+
+  /* Border Radius - restrained 2 to 4px */
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+
+  /* Motion Tokens (60fps, subtle, transform & opacity only) */
+  --ease-out: cubic-bezier(.22, .61, .36, 1);
+  --dur-fast: 150ms;
+  --dur-base: 240ms;
+  --dur-slow: 360ms;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms !important;
+    --dur-base: 0ms !important;
+    --dur-slow: 0ms !important;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
